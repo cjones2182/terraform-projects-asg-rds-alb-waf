@@ -27,14 +27,6 @@ module "alb" {
 module "s3" {
   source = "../../modules/s3"
 }
-module "ecs" {
-  source                    = "../../modules/ecs"
-  environment               = var.environment
-  aws_secretsmanager_secret = module.secrets.aws_secretsmanager_secret
-  alb_target_group          = module.alb.alb_target_group
-  app_security_group        = module.security-groups.app_security_group
-  private_subnets           = module.vpc.private_subnets
-}
 module "waf" {
   source   = "../../modules/waf"
   main_alb = module.alb.main_alb
