@@ -12,10 +12,8 @@ on:
 jobs:
 
   checkov:
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     with:
-    directory: env/dev
-    framework: terraform
 
     steps:
      - name: checkout code
