@@ -10,6 +10,7 @@ resource "aws_db_instance" "main_rds" {
   vpc_security_group_ids = [var.rds_security_group]
   multi_az = true
   db_subnet_group_name = aws_db_subnet_group.db_subnet_group.name
+  storage_encrypted = true
 
   tags = {
     name = "${var.environment}-main-rds"
