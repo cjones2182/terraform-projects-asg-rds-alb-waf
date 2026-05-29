@@ -41,4 +41,6 @@ module "rds" {
   database_subnets          = module.vpc.database_subnets
   environment               = var.environment
 }
-
+module "asg" {
+  source = "../../modules/asg"
+}
