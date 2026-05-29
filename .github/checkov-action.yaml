@@ -12,8 +12,7 @@ on:
 jobs:
 
   checkov:
-    runs_on:
-      ubuntu-latest
+    runs_on: ubuntu-latest
     with:
     directory: env/dev
     framework: terraform
@@ -39,5 +38,8 @@ jobs:
 
      - name: Checkov GitHub Action
        uses: bridgecrewio/checkov-action@v12
+       with:
+         directory: env/dev
+         framework: terraform
 
 
