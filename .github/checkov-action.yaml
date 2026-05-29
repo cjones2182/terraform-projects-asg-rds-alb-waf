@@ -13,7 +13,7 @@ jobs:
 
   checkov:
     runs-on: ubuntu-latest
-    with:
+   
 
     steps:
      - name: checkout code
