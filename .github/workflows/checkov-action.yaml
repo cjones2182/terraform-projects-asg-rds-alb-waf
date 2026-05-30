@@ -1,4 +1,4 @@
-name: checkov
+name: checkov         #will configure oidc later 
 
 on:
   push:
